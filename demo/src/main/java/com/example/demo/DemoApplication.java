@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.example.demo.entity.passport;
+import com.example.demo.entity.student;
 import com.example.demo.service.passportservice;
 import com.example.demo.service.studentservice;
 import org.slf4j.Logger;
@@ -33,17 +34,17 @@ public class DemoApplication {
 	}
 
 
-	@Override
+
 	@Transactional
 	public void run(String... args) throws Exception {
-//		Student student = studentService.findById(20001L); // persistence context(student)
-//		log.info("Student -> {}",student);
-//		log.info("Passport -> {}",student.getPassport()); // persistence context()
+		student Student = studentService.findById(20001L); // persistence context(student)
+		log.info("Student -> {}",Student);
+		//log.info("Passport -> {}",student.getpassport()); // persistence context()
 //
 
 //		Passport passport = passportService.findById(50001L); // persistence context(student)
-		log.info("Student -> {}",passport);
-		log.info("Passport -> {}", passport.getStudent()); // persistence context()
+	//	log.info("Student -> {}",passport);
+	//	log.info("Passport -> {}", passport.getStudent()); // persistence context()
 
 
 		// Get the course 80001
